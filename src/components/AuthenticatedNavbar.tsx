@@ -23,7 +23,7 @@ export default function AuthenticatedNavbar() {
                     <ul className='flex flex-col p-4 md:p-0 mt-4 md:mt-0 md:flex-row md:space-x-8 font-medium'>
                         <li>
                             <Link
-                                href={'#'}
+                                href={'/controle'}
                             >
                                 Controle
                             </Link>
