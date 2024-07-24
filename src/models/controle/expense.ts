@@ -31,4 +31,52 @@ export const expenses: Expense[] = [
         category: 'investment',
         date: '22/07/2024'
     },
+    {
+        id: '4',
+        amount: 650,
+        category: 'investment',
+        date: '22/07/2024'
+    },
+    {
+        id: '4',
+        amount: 650,
+        category: 'investment',
+        date: '22/07/2024'
+    },
+    {
+        id: '4',
+        amount: 650,
+        category: 'investment',
+        date: '22/07/2024'
+    },
+    {
+        id: '4',
+        amount: 650,
+        category: 'investment',
+        date: '22/07/2024'
+    },
+    {
+        id: '4',
+        amount: 650,
+        category: 'investment',
+        date: '22/07/2024'
+    },
+    {
+        id: '4',
+        amount: 650,
+        category: 'investment',
+        date: '22/07/2024'
+    },
+    {
+        id: '4',
+        amount: 650,
+        category: 'investment',
+        date: '22/07/2024'
+    },
+    {
+        id: '4',
+        amount: 650,
+        category: 'investment',
+        date: '22/07/2024'
+    },
 ]

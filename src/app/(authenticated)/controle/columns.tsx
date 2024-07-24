@@ -67,14 +67,11 @@ export const columns: ColumnDef<Expense>[] = [
                         </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
-                        <DropdownMenuLabel>Ações</DropdownMenuLabel>
                         <DropdownMenuItem
-                            onClick={() => navigator.clipboard.writeText(expense.id)}
+                            onClick={() => {}}
                         >
-                            Copiar o id do gasto
+                            Editar
                         </DropdownMenuItem>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem>Editar</DropdownMenuItem>
                         <DropdownMenuItem>Deletar</DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>

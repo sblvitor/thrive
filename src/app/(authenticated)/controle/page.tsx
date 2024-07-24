@@ -14,7 +14,9 @@ export default async function Page() {
 
     return (
         <main className="flex flex-col min-h-screen items-center justify-between p-24">
-            <DataTable columns={columns} data={data} />
+            <div className='w-full'>
+                <DataTable columns={columns} data={data} />
+            </div>
         </main>
     )
 }
