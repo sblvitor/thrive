@@ -4,6 +4,12 @@ import { DataTable } from '../../../components/ui/data-table'
 import { columns } from './columns'
 import CreateCategoryCard from '@/components/controle/CreateCategoryCard'
 import MyCategories from '@/components/controle/MyCategories'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: "Thrive | Controle",
+    description: "Controle de gastos mensais",
+};
 
 async function getData(): Promise<Expense[]> {
     // TODO mock api call, do skeletons
