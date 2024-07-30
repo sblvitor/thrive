@@ -9,12 +9,8 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-
-const textRight = 'text-right'
 
 export const columns: ColumnDef<Expense>[] = [
     {
@@ -37,7 +33,7 @@ export const columns: ColumnDef<Expense>[] = [
     {
         accessorKey: "category",
         header: "Categoria",
-        // provavelmente ira sair
+        // provavelmente ira sair - customizavel pelo usuario
         cell: ({ row }) => {
             function formatCategory(): string {
                 switch(row.getValue("category")) {
@@ -52,6 +48,23 @@ export const columns: ColumnDef<Expense>[] = [
             return <div className="font-medium">{formatCategory()}</div>
         }
     },
+    {
+        accessorKey: "paymentMethod",
+        header: "Método",
+        cell: ({ row }) => {
+            function formatPaymentMethod(): string {
+                switch(row.getValue("paymentMethod")) {
+                    case 'pix': return 'Pix'
+                    case 'credit': return 'Crédito'
+                    case 'debit': return 'Débito'
+                    case 'slip': return 'Boleto'
+                    default: return ''
+                }
+            }
+
+            return <div>{formatPaymentMethod()}</div>
+        }
+    },  
     {
         id: "actions",
         // header: 'Ações',

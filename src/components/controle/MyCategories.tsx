@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card'
 import { Button } from '../ui/button'
-import { ChevronLeft, ChevronRight, Edit } from 'lucide-react'
+import { ChevronLeft, ChevronRight, Edit, Plus } from 'lucide-react'
 import { Separator } from '../ui/separator'
 import { Pagination, PaginationContent, PaginationItem } from '../ui/pagination'
 
@@ -11,12 +11,18 @@ export default function MyCategories() {
     
     return (
         <Card className='overflow-hidden'>
-            <CardHeader className='bg-muted/50'>
-                <CardTitle>Minhas categorias</CardTitle>
-                <CardDescription>
-                    {/* Mês: Julho, 2024 */}
-                    {today.replace(/^./, str => str.toUpperCase())}
-                </CardDescription>
+            <CardHeader className='bg-muted/50 flex flex-row items-start'>
+                <div className='grid gap-0.5'>
+                    <CardTitle className='text-xl'>Minhas categorias</CardTitle>
+                    <CardDescription>
+                        {today.replace(/^./, str => str.toUpperCase())}
+                    </CardDescription>
+                </div>
+                <div className='ml-auto'>
+                    <Button variant={'outline'} size={'icon'}>
+                        <Plus />
+                    </Button>
+                </div>
             </CardHeader>
             <CardContent className='pt-6 text-sm'>
                 {/* map.. */}
