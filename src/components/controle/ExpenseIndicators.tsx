@@ -1,14 +1,18 @@
+'use client'
+
 import React from 'react'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import { Progress } from '../ui/progress'
 import { Button } from '../ui/button'
-import { Edit, Edit2 } from 'lucide-react'
+import { Edit2 } from 'lucide-react'
+import MonthPicker from '../ui/month-picker'
 
 export default function ExpenseIndicators() {
 
     const thisMonth = new Date().toLocaleDateString('pt-BR', {month: 'long'})
 
     return (
+        <>
         <div className='flex w-full space-x-4'>
             <Card  className='w-full'>
                 <CardHeader className='pb-4'>
@@ -40,5 +44,8 @@ export default function ExpenseIndicators() {
                 </CardContent>
             </Card>
         </div>
+        {/* trocar de lugar? / Arrumar mes no calendario */}
+        <MonthPicker />
+        </>
     )
 }
