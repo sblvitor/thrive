@@ -15,6 +15,7 @@ import {
   import * as React from 'react';
   import { buttonVariants } from '@/components/ui/button';
   import { cn } from '@/lib/utils';
+  import { ptBR } from 'date-fns/locale/pt-BR'
   
   function getStartOfCurrentMonth() {
     return startOfMonth(startOfToday());
@@ -119,8 +120,8 @@ import {
                     type="button"
                     onClick={() => onMonthChange(month)}
                   >
-                    <time dateTime={format(month, 'yyyy-MM-dd')}>
-                      {format(month, 'MMM')}
+                    <time dateTime={format(month, 'yyyy-MM-dd')} className='capitalize'>
+                      {format(month, 'MMM', {locale: ptBR})}
                     </time>
                   </button>
                 </div>
