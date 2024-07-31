@@ -44,8 +44,8 @@ export default function ExpenseIndicators() {
                 </CardContent>
             </Card>
         </div>
-        {/* trocar de lugar? / Arrumar mes no calendario */}
-        <MonthPicker />
+        {/* trocar de lugar? */}
+        {/* <MonthPicker /> */}
         </>
     )
 }
