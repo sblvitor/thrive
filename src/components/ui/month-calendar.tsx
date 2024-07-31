@@ -69,7 +69,7 @@ import {
                   aria-label="Go to previous year"
                   className={cn(
                     buttonVariants({ variant: 'outline' }),
-                    'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
+                    'h-7 w-7 bg-transparent p-0',
                     'absolute left-1'
                   )}
                   type="button"
@@ -82,8 +82,8 @@ import {
                   aria-label="Go to next year"
                   className={cn(
                     buttonVariants({ variant: 'outline' }),
-                    'h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100',
-                    'absolute right-1 disabled:bg-slate-100'
+                    'h-7 w-7 bg-transparent p-0',
+                    'absolute right-1'
                   )}
                   type="button"
                   disabled={isFuture(add(firstDayCurrentYear, { years: 1 }))}
