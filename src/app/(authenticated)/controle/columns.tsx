@@ -2,7 +2,7 @@
 
 import { ColumnDef } from "@tanstack/react-table"
 import { Expense } from "@/models/controle/expense" // You can use a Zod schema here if you want. TODO ver depois
-import { MoreHorizontal } from "lucide-react"
+import { ArrowDown, ArrowUp, ArrowUpDown, MoreHorizontal } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -15,11 +15,38 @@ import {
 export const columns: ColumnDef<Expense>[] = [
     {
         accessorKey: "date",
-        header: "Data"
+        header: ({ column }) => {
+            return (
+                <Button
+                    variant={'ghost'}
+                    onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+                >
+                    Data
+                    { column.getIsSorted() 
+                        ? column.getIsSorted() === 'asc' ? <ArrowUp className="ml-2 h-4 w-4" /> : <ArrowDown className="ml-2 h-4 w-4" /> 
+                        : <ArrowUpDown className="ml-2 h-4 w-4" />
+                    }
+                </Button>
+            )
+        },
+        cell: ({ row }) => <div className="pl-2">{row.getValue('date')}</div>
     },
     {
         accessorKey: "amount",
-        header: () => <div className="text-start">Quantia</div>,
+        header: ({ column }) => {
+            return (
+                <Button
+                    variant={'ghost'}
+                    onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+                >
+                    Quantia
+                    { column.getIsSorted() 
+                        ? column.getIsSorted() === 'asc' ? <ArrowUp className="ml-2 h-4 w-4" /> : <ArrowDown className="ml-2 h-4 w-4" /> 
+                        : <ArrowUpDown className="ml-2 h-4 w-4" />
+                    }
+                </Button>
+            )
+        },
         cell: ({ row }) => {
             const amount = parseFloat(row.getValue("amount"))
             const formatted = new Intl.NumberFormat("pt-BR", {
@@ -27,7 +54,7 @@ export const columns: ColumnDef<Expense>[] = [
                 currency: 'BRL',
             }).format(amount)
 
-            return <div className="font-medium">{formatted}</div>
+            return <div className="font-medium pl-4">{formatted}</div>
         }
     },
     {
