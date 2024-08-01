@@ -12,7 +12,6 @@ export default function ExpenseIndicators() {
     const thisMonth = new Date().toLocaleDateString('pt-BR', {month: 'long'})
 
     return (
-        <>
         <div className='flex w-full space-x-4'>
             <Card  className='w-full'>
                 <CardHeader className='pb-4'>
@@ -44,8 +43,5 @@ export default function ExpenseIndicators() {
                 </CardContent>
             </Card>
         </div>
-        {/* trocar de lugar? */}
-        {/* <MonthPicker /> */}
-        </>
     )
 }

@@ -1,12 +1,9 @@
 import { Expense, julyExpenses } from '@/models/controle/expense'
 import React from 'react'
-import { DataTable } from '../../../components/ui/data-table'
-import { columns } from './columns'
 import CreateCategoryCard from '@/components/controle/CreateCategoryCard'
 import MyCategories from '@/components/controle/MyCategories'
 import { Metadata } from 'next'
 import ExpenseIndicators from '@/components/controle/ExpenseIndicators'
-import MonthPicker from '@/components/ui/month-picker'
 import ExpensesControl from '@/components/controle/ExpensesControl'
 
 export const metadata: Metadata = {
@@ -28,10 +25,8 @@ export default async function Page() {
             <div className='flex w-full space-x-8'>
                 <div className='w-3/4 space-y-4'>
                     {/* <CreateCategoryCard /> */}
-                    {/* <MonthPicker /> */}
                     <ExpenseIndicators />
                     <ExpensesControl data={data} />
-                    {/* <DataTable columns={columns} data={data} /> */}
                 </div>
                 <div className='w-1/4'>
                     <MyCategories />
