@@ -19,7 +19,7 @@ export const columns: ColumnDef<Expense>[] = [
             return (
                 <Button
                     variant={'ghost'}
-                    onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+                    onClick={() => column.toggleSorting()}
                 >
                     Data
                     { column.getIsSorted() 
@@ -37,7 +37,7 @@ export const columns: ColumnDef<Expense>[] = [
             return (
                 <Button
                     variant={'ghost'}
-                    onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+                    onClick={() => column.toggleSorting()}
                 >
                     Quantia
                     { column.getIsSorted() 
