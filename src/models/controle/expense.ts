@@ -7,6 +7,45 @@ export type Expense = {
 }
 
 // mock data
+export const augustExpenses: Expense[] = [
+    {
+        id: '1',
+        amount: 233,
+        category: 'bills',
+        date: '01/08/2024',
+        paymentMethod: 'pix'
+    },
+    {
+        id: '2',
+        amount: 17.9,
+        category: 'shopping',
+        date: '24/08/2024',
+        paymentMethod: 'credit',
+    },
+    {
+        id: '3',
+        amount: 1232.12,
+        category: 'goals',
+        date: '17/08/2024',
+        paymentMethod: 'credit'
+    },
+    {
+        id: '4',
+        amount: 650,
+        category: 'investment',
+        date: '17/08/2024',
+        paymentMethod: 'debit'
+    },
+    {
+        id: '4',
+        amount: 421.21,
+        category: 'shopping',
+        date: '02/08/2024',
+        paymentMethod: 'pix'
+    },
+]
+
+
 export const julyExpenses: Expense[] = [
     {
         id: '1',
