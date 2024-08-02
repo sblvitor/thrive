@@ -22,6 +22,7 @@ import {
   } from "@/components/ui/table"
 import { Button } from "./button"
 import { useState } from "react"
+import { DataTablePagination } from "./data-table-pagination"
 
 interface DataTableProps<TData, TValue> {
     columns: ColumnDef<TData, TValue>[]
@@ -52,7 +53,7 @@ export function DataTable<TData, TValue>({
     })
 
     return (
-        <div>
+        <div className=" space-y-4">
             <div className="rounded-md border">
                 <Table>
                     <TableHeader>
@@ -95,24 +96,7 @@ export function DataTable<TData, TValue>({
                     </TableBody>
                 </Table>
             </div>
-            <div className="flex items-center justify-end space-x-2 py-4">
-                <Button
-                    variant={'outline'}
-                    size={'sm'}
-                    onClick={() => table.previousPage()}
-                    disabled={!table.getCanPreviousPage()}
-                >
-                    Anterior
-                </Button>
-                <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => table.nextPage()}
-                    disabled={!table.getCanNextPage()}
-                >
-                    Próximo
-                </Button>
-            </div>
+            <DataTablePagination table={table} />
         </div>
     )
 }
